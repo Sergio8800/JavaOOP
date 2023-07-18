@@ -10,7 +10,7 @@ public class Main {
        Bird birdShell = new Bird();
 
        System.out.println(catBarsik.nameAnimal);
-//       catBarsik.hunt();
+       ((Cat)(catBarsik)).hunt(); // во второй лекции показали как изменить поведение экземпляря, если он от базового создан.
        catMaxik.hunt();
        catMaxik.setIsVaccinated(true);
        System.out.println(catMaxik.isVaccinated);
