@@ -1,4 +1,5 @@
-public class Dog extends Cat{
+public class Dog extends Cat {
+
     private boolean freindOfman;
     public Dog (){
         this("Max",null,null, false, 4, true);
