@@ -55,7 +55,7 @@ public class Main {
         System.out.println(clinic.getCanFly());
         clinic.printAnimals(clinic.getCanRun());
         Doctors Igor = new DoctorOfRun("Igor", "Nikolaev", 25,"Doctor", "Runnable");
-        Doctors IgorN = new DoctorOfSwim("IgorN", "Niko", 56,"Doctor", "Swimable");
+        DoctorOfSwim IgorN = new DoctorOfSwim("IgorN", "Niko", 56,"Doctor", "Swimable");
         Doctors IgorKN = new DoctorOfFly("IgorKN", "Valaev", 44,"Doctor", "Flyable");
         Doctors IgorPS = new DoctorOfFly("IgorPS", "Skolaev", 35,"Doctor", "Flyable");
         Doctors IgorRK = new DoctorOfRun("IgorRK", "Nasolaev", 33,"Doctor", "Runnable");
@@ -72,5 +72,6 @@ public class Main {
         System.out.println(clinic.getPatient());
         System.out.println(clinic.getPatientSwim());
         System.out.println(clinic.getPatientFly());
+        clinic.addPatientSwimable(IgorN,lili);
     }
 }

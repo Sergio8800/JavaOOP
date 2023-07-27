@@ -6,12 +6,14 @@ import java.util.Map;
 public class VetClinic {
     private List<Animal> animals;
     private List<Doctors> doctors;
+    private Map<DoctorOfSwim, Swimable> patientSwimAnddoctorOfSwims;
     private Map<Doctors, Animal> patients;
 
     public VetClinic() {
         this.animals = new ArrayList<>();
         this.doctors = new ArrayList<>();
         this.patients = new HashMap<>();
+        this.patientSwimAnddoctorOfSwims = new HashMap<>();
     }
 
     public VetClinic addNewAnimal(Animal animal) {
@@ -26,6 +28,16 @@ public class VetClinic {
 
     public VetClinic addPatient(Doctors doctor, Animal animal) {
         patients.put(doctor, animal);
+        return this;
+    }
+    public VetClinic addPatientSwimable(DoctorOfSwim doctor, Animal animal) {
+        if (animal instanceof Swimable){
+            patients.put(doctor, animal);
+        }else {
+            System.out.printf(" patient %s do dot add to doctor %s", animal, doctor);
+        }
+
+
         return this;
     }
 
@@ -60,7 +72,7 @@ public class VetClinic {
 
     public Map<DoctorOfRun, Animal> getPatientRun(DoctorOfRun doctor, Animal animal) {
         Map<DoctorOfRun, Animal> result = new HashMap<>();
-        if (doctor instanceof TypeOfRun || animal instanceof Runnable) {
+        if (doctor instanceof TypeOfRun || animal instanceof java.lang.Runnable) {
             result.put(doctor, animal);
         }
         return result;
@@ -116,7 +128,7 @@ public class VetClinic {
     public List<Animal> getCanRun() {
         List<Animal> result = new ArrayList<>();
         for (Animal el : animals) {
-            if (el instanceof Runnable) {
+            if (el instanceof java.lang.Runnable) {
                 result.add(el);
             }
         }
