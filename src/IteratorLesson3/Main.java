@@ -51,9 +51,7 @@ public class Main {
          resultSet.add(pharmacy3);
          System.out.println(" вывод множества Set():");
          System.out.println(resultSet);
-
-
-
+         System.out.println(" ");
 
     }
 }

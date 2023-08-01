@@ -53,6 +53,21 @@ public void ComparePh(Pharmacy o){
             return 1;
         }
         return 0;
+
+//        Integer dif = this.getPowerComp() - o.getPowerComp();
+//        if(dif != 0) return dif;
+//
+//        // чем больше компанентов, тем больше Pharmacy
+//        dif = this.components.size() - o.components.size();
+//        if(dif != 0) return dif;
+//        // при одинаковой суммарной силе и одинаковом количестве, сравниваем по названиям
+//        for( int i = 0; i<this.components.size(); i++){
+//            dif = this.components.get(i).getName().compareTo(o.components.get(i).getName());
+//            if (dif != 0) return dif;
+//        }
+//
+//        // получается составы одинаковы
+//        return 0;
     }
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -128,5 +143,6 @@ public void ComparePh(Pharmacy o){
 //
 //     };
 //     }
+
 
 }

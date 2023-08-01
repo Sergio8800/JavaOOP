@@ -73,5 +73,6 @@ public class Main {
         System.out.println(clinic.getPatientSwim());
         System.out.println(clinic.getPatientFly());
         clinic.addPatientSwimable(IgorN,lili);
+
     }
 }
