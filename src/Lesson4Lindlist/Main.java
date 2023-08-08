@@ -20,8 +20,7 @@ public class Main {
         }
 
         System.out.println("================= После удаления элемента");
-        numb.removeE(0
-        );
+        numb.removeE(0);
         numb.printE();
     }
 
